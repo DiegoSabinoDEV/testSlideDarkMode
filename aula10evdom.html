@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Eventos Dom</title>
+  </head>
+  <style>
+    #area {
+      background: rgb(42, 139, 42);
+      color: white;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1>Somando Valores</h1>
+    <label for="txtn1">digite um número</label>
+    <input type="number" name="txtn1" id="txtn1" /> +
+    <label for="txtn2">digite outro número</label>
+    <input type="number" name="txtn2" id="txtn2" />
+    <input type="button" value="somar" onclick="somar()" />
+
+    <div id="res">Resultado:</div>
+    <div id="area">Interaja...</div>
+    <script src="aula10.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+/* Estilização para o elemento <body>. Adicionamos uma transição para a cor de fundo e cor do texto. 
+Isto é usado para que, ao mudar entre o modo claro e escuro, as cores mudem de forma suave e não abrupta. */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilização para quando o modo escuro está ativado. 
+Muda a cor de fundo para um tom escuro e a cor do texto para branco. */
+.dark-mode {
+  background-color: #0d1021;
+  color: #ffffff;
+}
+
+/* Estilização para o switch (chave de alternância) para mudar entre os modos.
+Define a posição como relativa, tamanho e como ele é exibido. */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Esconde o input dentro do switch. 
+Isso é feito porque queremos usar um estilo customizado para a chave de alternância. */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Estilização para o controle deslizante (slider) da chave de alternância. 
+Define posição, forma como o cursor aparece ao passar sobre ele, posicionamento e cor de fundo. */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+/* Estilização para o círculo interno do slider. 
+Define sua posição, tamanho, posicionamento, cor de fundo e transição. */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+/* Altera a cor de fundo do slider quando o input associado está marcado. */
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+/* Adiciona uma sombra sutil no slider quando o input associado está focado. */
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+/* Move o círculo interno do slider para a direita quando o input associado está marcado. */
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/* Arredonda as bordas do slider para que tenha uma forma ovalada. */
+.slider.round {
+  border-radius: 34px;
+}
+
+/* Arredonda o círculo interno do slider para que seja completamente redondo. */
+.slider.round::before {
+  border-radius: 50%;
+}

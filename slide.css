@@ -1,0 +1,87 @@
+.slide1 {
+  --i: 1;
+}
+
+.slide2 {
+  --i: 2;
+}
+
+.slide3 {
+  --i: 3;
+}
+
+.slide4 {
+  --i: 4;
+}
+
+/* O seletor universal (*) aplica estilos a todos os elementos na página. 
+Aqui, estamos resetando as margens e o preenchimento e definindo o box-sizing para border-box. 
+Isso garante um início mais consistente em diferentes navegadores. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilização para o elemento <body>. Ele é configurado para:
+  1. Centralizar conteúdo usando Flexbox.
+  2. Ocupar, no mínimo, toda a altura da janela do navegador.
+  3. Ter uma imagem de fundo que cobre todo o espaço disponível. */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(img/backgroundfundo.jpg);
+  background-size: cover;
+}
+
+/* Estilização para a div com classe "box":
+  1. Posicionada de forma relativa.
+  2. Tem dimensões específicas.
+  3. Está configurada para preservar o estilo 3D de filhos e tem uma animação aplicada. */
+.box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+}
+
+/* Definição da animação chamada 'animate'. Ela roda a div em seu eixo Y. */
+@keyframes animate {
+  0% {
+    transform: perspective(600px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(600px) rotateY(360deg);
+  }
+}
+
+/* Estilização para os elementos <span> dentro da div .box. 
+  Os spans são posicionados absolutamente, ocupam toda a área da div pai e são transformados no espaço 3D. */
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  /* Ajustamos a multiplicação para aumentar o ângulo entre as imagens e 
+     possivelmente ajustamos o translateZ para alterar a distância delas do centro */
+  transform: rotateY(calc(var(--i) * 90deg)) translateZ(200px);
+  /*-webkit-box-reflect: below 0px
+    linear-gradient(transparent, transparent, #0004);*/
+}
+
+/* Estilização das imagens dentro dos spans na div .box.
+  As imagens são posicionadas para ocupar todo o espaço do span e ajustadas para cobrir completamente o espaço. */
+.box span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

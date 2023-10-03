@@ -1,0 +1,56 @@
+<!-- Declaração DOCTYPE indica ao navegador que esta página está escrita em HTML5. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <!-- O elemento <html> envolve todo o conteúdo da página. 'lang="pt-br"' indica que a linguagem principal da página é Português Brasileiro. -->
+
+  <head>
+    <!-- A seção <head> contém meta informações e links para recursos externos que não são exibidos diretamente na página. -->
+
+    <!-- Define o conjunto de caracteres usado pelo documento. No caso, UTF-8, que é uma codificação de caracteres popular e abrangente. -->
+    <meta charset="UTF-8" />
+
+    <!-- A meta viewport controla como o documento é exibido em dispositivos móveis. 
+    "width=device-width" faz com que a largura da página siga a largura do dispositivo.
+    "initial-scale=1.0" define o nível inicial de zoom quando a página é carregada pela primeira vez. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link para um arquivo de estilo externo chamado "slide.css". 
+    Este arquivo contém estilos CSS que afetam a aparência da página. -->
+    <link rel="stylesheet" type="text/css" href="slide.css" />
+
+    <!-- O título da página que será mostrado na aba do navegador. -->
+    <title>Slide</title>
+  </head>
+  <!-- Fim da seção <head>. -->
+
+  <body>
+    <!-- A seção <body> contém o conteúdo da página que é exibido no navegador. -->
+
+    <!-- Um container div com a classe "box". Provavelmente, esta div contém um conjunto de imagens que funcionam como um slide ou carrossel. -->
+    <div class="box">
+      <!-- Cada <span> contém uma imagem. O atributo 'style' define uma variável CSS customizada chamada '--i', que parece ser usada para ordenar ou posicionar as imagens. -->
+
+      <!-- Primeira imagem do slide. -->
+      <span class="slide1"
+        ><img src="img/image1.jpg" alt="Descrição da imagem 1"
+      /></span>
+      <!-- Segunda imagem do slide. -->
+      <span class="slide2"
+        ><img src="img/image2.jpg" alt="Descrição da imagem 2"
+      /></span>
+
+      <!-- Terceira imagem do slide. -->
+      <span class="slide3"
+        ><img src="img/image3.jpg" alt="Descrição da imagem 3"
+      /></span>
+
+      <!-- Quarta imagem do slide. -->
+      <span class="slide1"
+        ><img src="img/image4.jpg" alt="Descrição da imagem 4"
+      /></span>
+    </div>
+    <!-- Fim do container "box". -->
+  </body>
+  <!-- Fim da seção <body>. -->
+</html>
+<!-- Fim do elemento <html>. -->
