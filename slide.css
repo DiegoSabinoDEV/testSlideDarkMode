@@ -32,7 +32,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url(img/backgroundfundo.jpg);
+  background: url(img/fundo.jpg);
   background-size: cover;
 }
 
@@ -51,10 +51,10 @@ body {
 /* Definição da animação chamada 'animate'. Ela roda a div em seu eixo Y. */
 @keyframes animate {
   0% {
-    transform: perspective(600px) rotateY(0deg);
+    transform: perspective(500px) rotateY(0deg);
   }
   100% {
-    transform: perspective(600px) rotateY(360deg);
+    transform: perspective(500px) rotateY(360deg);
   }
 }
 
